@@ -13,7 +13,7 @@ const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 if (mobileMenuButton && closeMobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.add('open');
-        document.body.style.overflow = 'hidden'; 
+        document.body.style.overflow = 'hidden';
     });
 
     closeMobileMenuButton.addEventListener('click', () => {
