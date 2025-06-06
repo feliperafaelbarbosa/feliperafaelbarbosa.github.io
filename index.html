@@ -49,7 +49,7 @@
                 <a href="#experience" class="nav-link ml-4">Experiência</a>
                 <a href="#skills" class="nav-link ml-4">Habilidades</a>
                 <a href="#portfolio" class="nav-link ml-4">Portfólio</a>
-                <a href="#contact" class="nav-link ml-4 btn btn-primary">Contato</a>
+                <a href="https://drive.google.com/file/d/1DLyI2NvOw8Aqv7bFsNFl9c1Q8-PFWe4d/view?usp=sharing" class="nav-link ml-4 btn btn-primary" target="_blank">Baixar Currículo</a>
             </nav>
             <!-- Botão do Menu Hamburguer para Mobile -->
             <div class="md:hidden">
@@ -71,15 +71,15 @@
                 <a href="#experience" class="nav-link mobile-nav-link text-xl">Experiência</a>
                 <a href="#skills" class="nav-link mobile-nav-link text-xl">Habilidades</a>
                 <a href="#portfolio" class="nav-link mobile-nav-link text-xl">Portfólio</a>
-                <a href="#contact" class="nav-link mobile-nav-link text-xl">Contato</a>
+                <a class="nav-link mobile-nav-link text-xl">Baixar Currículo</a>
             </nav>
         </div>
     </header>
 
     <main>
         <!-- Seção Home (Apresentação) -->
-        <section id="home" class="container mx-auto px-8 min-h-screen flex items-center py-20 bg-[var(--bg-secondary)]">
-            <div class="sm:px-6 grid md:grid-cols-2 gap-10 items-center">
+        <section id="home" class="py-20 md:py-28 md:mx-10">
+            <div class="container mx-auto sm:px-6 grid md:grid-cols-2 gap-10 items-center">
                 <div class="text-center md:text-left">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
                         Felipe Rafael Barbosa
@@ -117,6 +117,9 @@
                     </p>
                 </div>
             </div>
+            <div class="flex justify-center md:justify-center">
+                <img src="/images/tuxtyping.png" class="w-50 max-w-sm h-auto" alt="Imagem do Tux Digitando">
+            </div>
         </section>
         
         <!-- Seção Experiência -->
@@ -131,8 +134,8 @@
                             <p class="text-xs text-[var(--text-main)]">2024</p>
                         </div>
                         <div class="md:col-span-3">
-                            <h4 class="font-medium text-[var(--text-main)] mb-2">Professor de Teoria dos Grafos</h4>
-                            <p class="text-sm">Desenvolvi e implementei listas de exercícios, conduzi aulas práticas e teóricas, e autorei artigos sobre o uso da linguagem Sage para o ensino, contribuindo para o material didático do curso.</p>
+                            <h4 class="font-medium text-[var(--text-main)] mb-2">Estágio - Docência em Teoria dos Grafos</h4>
+                            <p class="text-sm">Desenvolvi e implementei listas de exercícios, conduzi aulas práticas e teóricas, e escrevi documentos sobre o uso da linguagem Sage para o ensino, contribuindo para o material didático.</p>
                         </div>
                     </div>
                     <!-- Experiência Item -->
@@ -142,19 +145,19 @@
                             <p class="text-xs text-[var(--text-main)]">2021 - 2023</p>
                         </div>
                         <div class="md:col-span-3">
-                            <h4 class="font-medium text-[var(--text-main)] mb-2">Desenvolvedor Full-stack & Gerente de Projetos</h4>
+                            <h4 class="font-medium text-[var(--text-main)] mb-2">Prestação de Serviços - Desenvolvedor Full-stack</h4>
                             <p class="text-sm">Analisei e corrigi sistemas em Java, JavaScript e TypeScript. Utilizei Docker, AWS e Terraform para criar ambientes estáveis, e desenvolvi aplicações com Angular e MySQL.</p>
                         </div>
                     </div>
                      <!-- Experiência Item -->
                     <div class="grid md:grid-cols-4 gap-4 py-8 border-b border-[var(--border-color)]">
                         <div class="md:col-span-1">
-                             <h3 class="font-semibold text-[var(--text-headings)]">Polícia Militar do Pará</h3>
-                            <p class="text-xs text-[var(--text-main)]">2016 - 2017</p>
+                             <h3 class="font-semibold text-[var(--text-headings)]">Revex</h3>
+                            <p class="text-xs text-[var(--text-main)]">2021</p>
                         </div>
                         <div class="md:col-span-3">
-                            <h4 class="font-medium text-[var(--text-main)] mb-2">Assistente Administrativo</h4>
-                            <p class="text-sm">Realizei o gerenciamento de documentos, incluindo protocolo, controle e arquivamento, e elaboração de ofícios, garantindo acesso rápido e eficiente à informação e precisão na comunicação.</p>
+                            <h4 class="font-medium text-[var(--text-main)] mb-2">Estágio - Suporte ao Cliente</h4>
+                            <p class="text-sm">Forneci suporte direto aos clientes usando a plataforma Zendesk, realizei testes na plataforma para assegurar seu funcionamento adequado.</p>
                         </div>
                     </div>
                 </div>
@@ -173,18 +176,18 @@
                                 <li class="font-medium">Python</li>
                                 <li>Machine Learning</li>
                                 <li>Análise de Dados</li>
-                                <li>Looker Studio</li>
+                                <li>PostgreSQL</li>
+                                <li>MySQL</li>
                             </ul>
                             <ul class="space-y-2">
                                 <li class="font-medium">JavaScript</li>
                                 <li>TypeScript</li>
                                 <li>Angular</li>
-                                <li>MySQL</li>
                             </ul>
                              <ul class="space-y-2">
                                 <li class="font-medium">DevOps</li>
                                 <li>Docker</li>
-                                <li>AWS / Terraform</li>
+                                <li>AWS</li>
                                 <li>Git & GitHub</li>
                             </ul>
                         </div>
@@ -267,6 +270,6 @@
     </footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="script.js"></script>
+    <script src="scripts/mobile.js"></script>
 </body>
 </html>

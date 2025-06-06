@@ -1,13 +1,11 @@
-@import "tailwindcss";
-
 :root {
-    --bg-main: #F4F5F7; /* Cinza muito claro, quase branco */
-    --bg-secondary: #FFFFFF; /* Branco para seções alternadas e cards */
-    --text-main: #3D4451; /* Cinza escuro para texto */
-    --text-headings: #1A202C; /* Preto suave para títulos */
-    --brand-color: #4A5759; /* Verde-cinza dessaturado (cor principal) */
-    --brand-color-hover: #3A4446; /* Versão mais escura para hover */
-    --border-color: #E2E8F0; /* Cinza claro para bordas */
+    --bg-main: #f0faff; /* Azul muito claro para o fundo principal */
+    --bg-secondary: #ffffff; /* Branco permanece para contraste */
+    --text-main: #1b2e3c; /* Azul escuro para texto legível */
+    --text-headings: #0086bf; /* Azul forte para títulos */
+    --brand-color: #09a5e8; /* Azul claro como cor principal da marca */
+    --brand-color-hover: #0073a6; /* Azul mais escuro para hover */
+    --border-color: #cce7f6; /* Azul claro para bordas */
 }
 
 body {
