@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Rafael Barbosa</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.0/lucide.min.css" xintegrity="sha512-5V2ph7XJ7Coey9S7vsx1H7zxB_IzG2sIt4icN1J6nFCSDqj1DCJ3sdHlYp72dJpG98yI2a0W8mP2uN7fPzLhRQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <style type="text/tailwindcss">
+        .nav-link {
+            @apply px-3 py-1 text-sm text-[var(--text-main)] hover:text-[var(--brand-color)] transition-colors duration-200;
+        }
+
+        .nav-link.active {
+            @apply text-[var(--brand-color)] font-semibold;
+        }
+
+        .section-title {
+            @apply text-2xl md:text-3xl font-bold text-center mb-10;
+        }
+
+        .card {
+            @apply bg-[var(--bg-secondary)] border border-[var(--border-color)] rounded-none; /* Sem cantos arredondados para um look mais sharp */
+        }
+
+        .btn {
+            @apply font-semibold py-2.5 px-6 text-sm rounded-none transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+        }
+
+        .btn-primary {
+            @apply bg-[var(--brand-color)] hover:bg-[var(--brand-color-hover)] text-white focus:ring-[var(--brand-color)];
+        }
+
+        .btn-secondary {
+            @apply bg-transparent border-2 border-[var(--brand-color)] text-[var(--brand-color)] hover:bg-[var(--brand-color)] hover:text-white focus:ring-[var(--brand-color)];
+        }
+    </style>
+</head>
+<body class="container mx-auto px-4">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-[var(--border-color)]">
+        <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-lg font-semibold text-[var(--brand-color)] tracking-wider">FELIPE RAFAEL BARBOSA</a>
+            <!-- Navegação Desktop -->
+            <nav class="hidden md:flex items-center">
+                <a href="#about" class="nav-link">Sobre</a>
+                <a href="#experience" class="nav-link ml-4">Experiência</a>
+                <a href="#skills" class="nav-link ml-4">Habilidades</a>
+                <a href="#portfolio" class="nav-link ml-4">Portfólio</a>
+                <a href="#contact" class="nav-link ml-4 btn btn-primary">Contato</a>
+            </nav>
+            <!-- Botão do Menu Hamburguer para Mobile -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-[var(--text-headings)] focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <!-- Menu Mobile -->
+        <div id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-full bg-white p-6 z-40">
+             <div class="flex justify-end mb-8">
+                <button id="close-mobile-menu-button" class="text-[var(--text-headings)] focus:outline-none">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+            <nav class="flex flex-col text-center space-y-6">
+                <a href="#home" class="nav-link mobile-nav-link text-xl">Início</a>
+                <a href="#about" class="nav-link mobile-nav-link text-xl">Sobre Mim</a>
+                <a href="#experience" class="nav-link mobile-nav-link text-xl">Experiência</a>
+                <a href="#skills" class="nav-link mobile-nav-link text-xl">Habilidades</a>
+                <a href="#portfolio" class="nav-link mobile-nav-link text-xl">Portfólio</a>
+                <a href="#contact" class="nav-link mobile-nav-link text-xl">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Seção Home (Apresentação) -->
+        <section id="home" class="container mx-auto px-8 min-h-screen flex items-center py-20 bg-[var(--bg-secondary)]">
+            <div class="sm:px-6 grid md:grid-cols-2 gap-10 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+                        Felipe Rafael Barbosa
+                    </h1>
+                    <p class="text-lg text-[var(--brand-color)] mb-6 font-medium">
+                        Cientista da Computação | Aprendizado de Máquina | Python
+                    </p>
+                    <p class="text-base text-[var(--text-main)] mb-8 max-w-lg mx-auto md:mx-0">
+                        Apaixonado por computação de alto desempenho e desenvolvimento de soluções tecnológicas que geram impacto positivo e contribuem para o meio ambiente.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                        <a href="#portfolio" class="btn btn-primary">Meus Projetos</a>
+                        <a href="#contact" class="btn btn-secondary">Vamos Conversar</a>
+                    </div>
+                </div>
+                <div class="flex justify-center md:justify-end">
+                    <img src="images/home_image_1.png"
+                         alt="Foto de Felipe Rafael Barbosa"
+                         class="w-full max-w-sm h-auto object-cover"
+                         onerror="this.onerror=null;this.src='https://placehold.co/500x600/E2E8F0/4A5759?text=Imagem';">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre Mim -->
+        <section id="about" class="py-20 md:py-28">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="max-w-4xl mx-auto text-left space-y-6 text-base leading-relaxed">
+                    <h2 class="section-title text-left mb-6">Sobre Mim</h2>
+                    <p>
+                        Ao longo da minha carreira, dediquei-me a transformar desafios em oportunidades. Um exemplo marcante foi a aplicação da metodologia CRISP-DM para garantir a entrega pontual das atividades em um projeto. Nesta mesma iniciativa, liderei uma equipe, apresentando tecnologias e estratégias para a resolução de problemas, o que também me permitiu exercitar minhas habilidades de ensino.
+                    </p>
+                    <p>
+                        Essa experiência reforçou minha convicção na minha capacidade de gerenciar e liderar projetos de Aprendizado de Máquina, bem como minha aptidão para comunicar-me claramente com diversos públicos. Fora da vida profissional, dedico-me ao Karatê Shotokan, onde a busca constante pelo aprimoramento da comunicação, autocontrole e tomada de decisão rápida são essenciais.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Experiência -->
+        <section id="experience" class="py-20 md:py-28 bg-[var(--bg-secondary)]">
+            <div class="container mx-auto px-4 sm:px-6">
+                <h2 class="section-title">Experiência Profissional</h2>
+                <div class="max-w-4xl mx-auto border-t border-[var(--border-color)]">
+                    <!-- Experiência Item -->
+                    <div class="grid md:grid-cols-4 gap-4 py-8 border-b border-[var(--border-color)]">
+                        <div class="md:col-span-1">
+                            <h3 class="font-semibold text-[var(--text-headings)]">Universidade Federal do Pará</h3>
+                            <p class="text-xs text-[var(--text-main)]">2024</p>
+                        </div>
+                        <div class="md:col-span-3">
+                            <h4 class="font-medium text-[var(--text-main)] mb-2">Professor de Teoria dos Grafos</h4>
+                            <p class="text-sm">Desenvolvi e implementei listas de exercícios, conduzi aulas práticas e teóricas, e autorei artigos sobre o uso da linguagem Sage para o ensino, contribuindo para o material didático do curso.</p>
+                        </div>
+                    </div>
+                    <!-- Experiência Item -->
+                    <div class="grid md:grid-cols-4 gap-4 py-8 border-b border-[var(--border-color)]">
+                        <div class="md:col-span-1">
+                             <h3 class="font-semibold text-[var(--text-headings)]">i9Amazon</h3>
+                            <p class="text-xs text-[var(--text-main)]">2021 - 2023</p>
+                        </div>
+                        <div class="md:col-span-3">
+                            <h4 class="font-medium text-[var(--text-main)] mb-2">Desenvolvedor Full-stack & Gerente de Projetos</h4>
+                            <p class="text-sm">Analisei e corrigi sistemas em Java, JavaScript e TypeScript. Utilizei Docker, AWS e Terraform para criar ambientes estáveis, e desenvolvi aplicações com Angular e MySQL.</p>
+                        </div>
+                    </div>
+                     <!-- Experiência Item -->
+                    <div class="grid md:grid-cols-4 gap-4 py-8 border-b border-[var(--border-color)]">
+                        <div class="md:col-span-1">
+                             <h3 class="font-semibold text-[var(--text-headings)]">Polícia Militar do Pará</h3>
+                            <p class="text-xs text-[var(--text-main)]">2016 - 2017</p>
+                        </div>
+                        <div class="md:col-span-3">
+                            <h4 class="font-medium text-[var(--text-main)] mb-2">Assistente Administrativo</h4>
+                            <p class="text-sm">Realizei o gerenciamento de documentos, incluindo protocolo, controle e arquivamento, e elaboração de ofícios, garantindo acesso rápido e eficiente à informação e precisão na comunicação.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seção Habilidades & Formação -->
+        <section id="skills" class="py-20 md:py-28">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="section-title text-left mb-6">Habilidades</h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
+                            <ul class="space-y-2">
+                                <li class="font-medium">Python</li>
+                                <li>Machine Learning</li>
+                                <li>Análise de Dados</li>
+                                <li>Looker Studio</li>
+                            </ul>
+                            <ul class="space-y-2">
+                                <li class="font-medium">JavaScript</li>
+                                <li>TypeScript</li>
+                                <li>Angular</li>
+                                <li>MySQL</li>
+                            </ul>
+                             <ul class="space-y-2">
+                                <li class="font-medium">DevOps</li>
+                                <li>Docker</li>
+                                <li>AWS / Terraform</li>
+                                <li>Git & GitHub</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="section-title text-left mb-6">Formação</h2>
+                        <ul class="space-y-4 text-sm">
+                            <li>
+                                <h4 class="font-semibold">Mestrado em Ciência da Computação</h4>
+                                <p>Universidade Federal do Pará (2023 - 2025)</p>
+                            </li>
+                            <li>
+                                <h4 class="font-semibold">Bacharelado em Ciência da Computação</h4>
+                                <p>Cesupa - Centro Universitário do Estado do Pará (2017 - 2021)</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Portfólio -->
+        <section id="portfolio" class="py-20 md:py-28 bg-[var(--bg-secondary)]">
+            <div class="container mx-auto px-4 sm:px-6">
+                <h2 class="section-title">Projetos Selecionados</h2>
+                <div class="grid md:grid-cols-2 gap-px bg-[var(--border-color)] border border-[var(--border-color)]">
+                    <!-- Projeto 1 -->
+                    <a href="#" class="group block bg-white p-8 hover:bg-[var(--bg-main)] transition-colors duration-300">
+                        <h3 class="text-xl font-semibold mb-2">Nome do Projeto 1</h3>
+                        <p class="text-sm text-[var(--text-main)] mb-4">Breve descrição do projeto, seu objetivo, as tecnologias utilizadas e o impacto ou resultado alcançado.</p>
+                        <span class="text-sm font-semibold text-[var(--brand-color)] group-hover:underline">Ver Detalhes &rarr;</span>
+                    </a>
+                    <!-- Projeto 2 -->
+                     <a href="#" class="group block bg-white p-8 hover:bg-[var(--bg-main)] transition-colors duration-300">
+                        <h3 class="text-xl font-semibold mb-2">Nome do Projeto 2</h3>
+                        <p class="text-sm text-[var(--text-main)] mb-4">Breve descrição do projeto, seu objetivo, as tecnologias utilizadas e o impacto ou resultado alcançado.</p>
+                        <span class="text-sm font-semibold text-[var(--brand-color)] group-hover:underline">Ver Detalhes &rarr;</span>
+                    </a>
+                    <!-- Projeto 3 -->
+                     <a href="#" class="group block bg-white p-8 hover:bg-[var(--bg-main)] transition-colors duration-300">
+                        <h3 class="text-xl font-semibold mb-2">Nome do Projeto 3</h3>
+                        <p class="text-sm text-[var(--text-main)] mb-4">Breve descrição do projeto, seu objetivo, as tecnologias utilizadas e o impacto ou resultado alcançado.</p>
+                        <span class="text-sm font-semibold text-[var(--brand-color)] group-hover:underline">Ver Detalhes &rarr;</span>
+                    </a>
+                     <!-- Projeto 4 -->
+                     <a href="#" class="group block bg-white p-8 hover:bg-[var(--bg-main)] transition-colors duration-300">
+                        <h3 class="text-xl font-semibold mb-2">Nome do Projeto 4</h3>
+                        <p class="text-sm text-[var(--text-main)] mb-4">Breve descrição do projeto, seu objetivo, as tecnologias utilizadas e o impacto ou resultado alcançado.</p>
+                        <span class="text-sm font-semibold text-[var(--brand-color)] group-hover:underline">Ver Detalhes &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Contato -->
+        <section id="contact" class="py-20 md:py-28">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <h2 class="text-2xl md:text-3xl font-bold">Vamos Construir Algo Juntos?</h2>
+                <p class="max-w-xl mx-auto text-base text-[var(--text-main)] mt-4 mb-8">
+                    Estou disponível para novos projetos e colaborações. Se você tem uma ideia e precisa de um especialista em computação e dados, entre em contato.
+                </p>
+                <a href="mailto:rafaelt.ibarbosa@gmail.com" class="btn btn-primary text-base">felipebarbosawk@gmail.com</a>
+                <div class="mt-12 flex justify-center space-x-6">
+                    <a href="https://github.com/feliperafaelbarbosa" target="_blank" class="text-[var(--text-main)] hover:text-[var(--brand-color)]" aria-label="GitHub">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/feliperafaelbarbosa" target="_blank" class="text-[var(--text-main)] hover:text-[var(--brand-color)]" aria-label="LinkedIn">
+                       <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--bg-secondary)] border-t border-[var(--border-color)] py-8">
+        <div class="container mx-auto px-4 sm:px-6 text-center text-xs text-[var(--text-main)]">
+            <p>&copy; <span id="currentYear"></span> Felipe Rafael Barbosa. Belém, Pará, Brasil.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+</body>
+</html>
