@@ -11,7 +11,6 @@ fetch(url)
         return response.json();
     })
     .then(data => {
-        console.log(data);
         data.forEach((e) => {
             const index = listRepoName.indexOf(e.name);
             if (index === -1) return;
