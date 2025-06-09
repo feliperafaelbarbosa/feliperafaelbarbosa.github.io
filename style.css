@@ -20,7 +20,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
-    /* color: var(--text-headings); */
+    color: var(--text-headings);
 }
 
 html {
@@ -28,10 +28,5 @@ html {
 }
 
 #mobile-menu {
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-}
-
-#mobile-menu.open {
-    transform: translateX(0);
+    transition: transform 1s ease-in-out;
 }

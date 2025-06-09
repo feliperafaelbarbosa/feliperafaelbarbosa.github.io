@@ -12,18 +12,18 @@ const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
 if (mobileMenuButton && closeMobileMenuButton && mobileMenu) {
     mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.add('open');
-        document.body.style.overflow = 'hidden';
+        mobileMenu.classList.remove('hidden'); // mostrar menu
+        document.body.style.overflow = 'hidden'; // impedir scroll
     });
 
     closeMobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = '';
+        mobileMenu.classList.add('hidden'); // esconder menu
+        document.body.style.overflow = ''; // liberar scroll
     });
     
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
+            mobileMenu.classList.add('hidden'); // esconder menu ao clicar em link
             document.body.style.overflow = '';
         });
     });
